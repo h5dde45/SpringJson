@@ -1,0 +1,22 @@
+hibernate:
+  connection:
+    autocommit: true
+
+spring:
+    datasource:
+      url: jdbc:mysql://localhost:3306/testschema?useSSL=false&serverTimezone=UTC
+      username: root
+      password: root
+
+    jpa:
+      properties:
+        hibernate:
+          current_session_context_class: org.springframework.orm.hibernate5.SpringSessionContext
+          default_schema: testschema
+          dialect: org.hibernate.dialect.MySQL5Dialect
+      show-sql: true
+logging:
+  level:
+    ROOT: warn
+    org.springframework: info
+    org.hibernate: info
